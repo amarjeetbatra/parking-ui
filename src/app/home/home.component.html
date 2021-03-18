@@ -1,0 +1,22 @@
+<h2>All Bookings</h2>
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Parking Number</th>
+                <th>Allocated To</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let booking of getBookings()">
+                <td>{{booking.parking.number}}</td>
+                <td>{{booking.user.name}}</td>
+                <td>{{booking.date | date}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
